@@ -1,0 +1,27 @@
+name: ☁️天气推送
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Run every 5 minutes
+
+jobs:
+  run-main-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Use the Node.js version you need
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: List Repository Contents
+        run: ls -R  # Add this step to list repository contents for debugging
+
+      - name: ☁️天气推送
+        run: node index.js --corpid=${{corpid}}  --corpsecret=${{corpsecret}} --apiKey={{apiKey}}
