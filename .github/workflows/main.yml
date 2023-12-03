@@ -24,4 +24,4 @@ jobs:
         run: ls -R  # Add this step to list repository contents for debugging
 
       - name: ☁️天气推送
-        run: node index.js --corpid=${{corpid}}  --corpsecret=${{corpsecret}} --apiKey={{apiKey}}
+        run: node index.js --corpid=${{secrets.corpid}}  --corpsecret=${{secrets.corpsecret}} --apiKey={{secrets.apiKey}}
