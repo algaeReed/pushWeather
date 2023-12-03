@@ -2,7 +2,7 @@ name: ☁️天气推送
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Run every 5 minutes
+    - cron: '0 * * * *'  # 1小时1次
 
 jobs:
   run-main-script:
