@@ -1,7 +1,7 @@
 const minimist = require("minimist");
 const axios = require("axios");
 const apiUrl = "https://devapi.qweather.com/v7/weather/now";
-const location = "101050311"; // location xian
+const location = "101110101"; // location xian
 // https://github.com/qwd/LocationList/blob/master/China-City-List-latest.csv
 const lang = "zh";
 // const apiKey = "";
